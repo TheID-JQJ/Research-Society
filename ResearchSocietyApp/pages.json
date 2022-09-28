@@ -3,9 +3,11 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页",
+				"navigationBarTitleText": "研学社",
 				"enablePullDownRefresh": false,
 				"navigationBarBackgroundColor": "#fff"
+				// "navigationBarBackgroundColor": "#f7edf5"
+				// "transparentTitle":"always"
 			}
 		}
 	    ,{
@@ -49,6 +51,7 @@
 		"selectedColor":"#000",
 		"backgroundColor":"#fff",
 		// "borderStyle":"#fff",
+		// "height":"60px",
 		"list": [{
 			"pagePath": "pages/index/index",
 			"iconPath":"static/tabbar/home-line.png",

@@ -34,8 +34,19 @@
             "path" : "pages/login/login",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/appoint",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "预约",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
             }
             
         }

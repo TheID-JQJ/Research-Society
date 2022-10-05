@@ -24,7 +24,7 @@
 		<!-- 应用 -->
 		<view class="application-background">
 			<view class="application">
-				<view class="appoint">
+				<view class="appoint" @click="toAppoint">
 					预约
 				</view>
 				
@@ -125,6 +125,16 @@
 			click(e) {
 				console.log(e)
 			},
+			jump(path, params) {
+				// 页面的跳转
+				this.$u.route({
+					url: path,
+					params
+				})
+			},
+			toAppoint() {
+				this.jump('pages/index/appoint', {})
+			}
 		}
 	}
 </script>

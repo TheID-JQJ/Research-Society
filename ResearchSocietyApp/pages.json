@@ -1,4 +1,9 @@
 {
+	// 如果您是通过uni_modules形式引入uView，可以忽略此配置
+	"easycom": {
+		"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+	},
+	
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
@@ -6,8 +11,6 @@
 				"navigationBarTitleText": "研学社",
 				"enablePullDownRefresh": false,
 				"navigationBarBackgroundColor": "#fff"
-				// "navigationBarBackgroundColor": "#f7edf5"
-				// "transparentTitle":"always"
 			}
 		}
 	    ,{
@@ -31,16 +34,6 @@
             
         }
         ,{
-            "path" : "pages/login/login",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "登录",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#fff"
-            }
-            
-        }
-        ,{
             "path" : "pages/index/appoint",
             "style" :                                                                                    
             {
@@ -50,10 +43,40 @@
             }
             
         }
+		,{
+		    "path" : "pages/login/login",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/login/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/find",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "研学社",
 		"navigationBarBackgroundColor": "#fff",
 		"backgroundColor": "#fff"
 	},

@@ -3,7 +3,7 @@
 		<!-- 账号信息 -->
 		<view class="account-background">
 			<view class="account">
-				<view class="appoint">
+				<view class="appoint" @click="toLogin">
 					头像
 				</view>
 				
@@ -57,30 +57,6 @@
 		
 		<!-- 账户 -->
 		<view class="wallet">
-	<!-- 		<u-grid
-				:border="false"
-				@click="click"
-				col="4"
-			>
-				<u-grid-item
-					v-for="(walletListItem,walletListIndex) in walletList"
-					:key="walletListIndex"
-					style="height: 150rpx;"
-				>
-					<text style=";margin-bottom: 10rpx;">{{walletListItem.number}}</text>
-					<text style="font-size: small;">{{walletListItem.title}}</text>
-				</u-grid-item>
-				<u-grid-item
-					:key="-1"
-					style="height: 150rpx; border-left: 2rpx solid #f7edf5;"
-				>
-					<u-icon
-						name="rmb-circle"
-						:size="30"
-					></u-icon>
-					<text style="font-size: small;">账户</text>
-				</u-grid-item>
-			</u-grid> -->
 			<myGrid class="grid" :myGridList="walletList" :myGridCol="4" v-slot="myGridData">
 				<view class="grid-item" v-if="myGridData.item.title!='wallet'">
 					<text style=";margin-bottom: 10rpx;">{{myGridData.item.number}}</text>
@@ -228,7 +204,21 @@
 			
 		},
 		methods: {
-
+			jump(url, params, type) {
+				type = type==null?'navigateTo':type
+				// 页面的跳转
+				this.$u.route({
+					url,
+					type,
+					params
+				})
+			},
+			toLogin() {
+				// this.jump('pages/login/login', {}, 'reLaunch')
+				uni.reLaunch({
+					url: '/pages/login/login'
+				})
+			}
 		}
 	}
 </script>

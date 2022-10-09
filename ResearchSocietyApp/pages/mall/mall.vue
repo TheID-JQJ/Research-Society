@@ -97,22 +97,22 @@
 				sortList: [
 					{
 						title: '奶茶铺子',
-						ico: '../../static/milkTea.svg',
+						ico: '../../static/svg/milkTea.svg',
 						img: 'background-image: url("https://tse1-mm.cn.bing.net/th/id/OIP-C.ZJUMQOtHPnWLkVuPxjVSSwHaIv?pid=ImgDet&rs=1");',
 					},
 					{
 						title: '零食铺子',
-						ico: '../../static/snacks.svg',
+						ico: '../../static/svg/snacks.svg',
 						img: 'background-image: url("https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1");',
 					},
 					{
 						title: '学习资料',
-						ico: '../../static/study.svg',
+						ico: '../../static/svg/study.svg',
 						img: 'background-image: url("https://www.amphasisdesign.com/image/cache/catalog/corporategifts/Customised%20Products/customized-pu-leather-notebook-800x800.jpg");',
 					},
 					{
 						title: '兑换时长',
-						ico: '../../static/time.svg',
+						ico: '../../static/svg/time.svg',
 						img: 'background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.96db53825942c485e2a1d31f1679fff3?rik=coDhrKg1RnfYrg&riu=http%3a%2f%2fpicapi.zhituad.com%2fphoto%2f69%2f35%2f46EAB.jpg&ehk=LcGVQNUtSfKbEVtiHu68jp%2bKwDpSJrvnVdQkHKCzHNM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1");',
 					}
 				],

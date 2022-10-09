@@ -14,7 +14,7 @@
 		<view class="img-background"/>
 		
 		<view class="login-content">
-			<h1 class="title">研学社</h1>
+			<h1 class="title my-animation">研学社</h1>
 			
 			<view class="login-form">
 				<u--form>

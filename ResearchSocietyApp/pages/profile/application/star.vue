@@ -1,25 +1,22 @@
 <template>
-	<view class="content">
-		appoint
+	<view>
+		收藏
 	</view>
 </template>
 
 <script>
 	export default {
-		onLoad(params) {
-			console.log(params)
-		},
 		data() {
 			return {
 				
-			};
+			}
 		},
 		methods: {
-
+			
 		}
 	}
 </script>
 
-<style lang="scss" scoped>
+<style>
 
 </style>

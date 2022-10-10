@@ -3,7 +3,6 @@
 		<!-- 搜索框 -->
 		<view class="search">
 			<u-search></u-search>
-			<!-- <text style="padding-left: 20rpx; font-size: small; line-height: 40rpx;">可用积分：255</text> -->
 		</view>
 		
 		<!-- 应用 -->
@@ -56,42 +55,50 @@
 					{
 						name: 'calendar-fill',
 						color: '#ff557f',
-						title: '分类'
+						title: '分类',
+						url: '/pages/mall/application/sort'
 					},
 					{
 						name: 'clock-fill',
 						color: '#ffff00',
-						title: '购物车'
+						title: '购物车',
+						url: '/pages/mall/application/shoppingCart'
 					},
 					{
 						name: 'grid-fill',
 						color: '#55ff7f',
-						title: '订单'
+						title: '订单',
+						url: '/pages/mall/application/order'
 					},
 					{
 						name: 'gift-fill',
 						color: '#aa55ff',
-						title: '账户'
+						title: '账户',
+						url: '/pages/mall/application/account'
 					},
 					{
 						name: 'man-add-fill',
 						color: '#00ffff',
-						title: '兑换券'
+						title: '兑换券',
+						url: '/pages/mall/application/voucher'
 					},
 					{
 						name: 'gift-fill',
 						color: '#aaff7f',
-						title: '优惠券'
+						title: '优惠券',
+						url: '/pages/mall/application/coupons'
 					},
 					{
 						name: 'integral-fill',
 						color: '#ffaaff',
-						title: '赚积分'
+						title: '赚积分',
+						url: '/pages/mall/application/earnPoints'
 					},
 					{
 						name: 'setting-fill',
 						color: '#a2a2a2',
-						title: '编辑'
+						title: '编辑',
+						url: '/pages/mall/application/editor'
 					}
 				],
 				sortList: [
@@ -99,21 +106,25 @@
 						title: '奶茶铺子',
 						ico: '../../static/svg/milkTea.svg',
 						img: 'background-image: url("https://tse1-mm.cn.bing.net/th/id/OIP-C.ZJUMQOtHPnWLkVuPxjVSSwHaIv?pid=ImgDet&rs=1");',
+						url: '/pages/mall/shop/milkTeaShop'
 					},
 					{
 						title: '零食铺子',
 						ico: '../../static/svg/snacks.svg',
 						img: 'background-image: url("https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1");',
+						url: '/pages/mall/shop/snackShop'
 					},
 					{
 						title: '学习资料',
 						ico: '../../static/svg/study.svg',
 						img: 'background-image: url("https://www.amphasisdesign.com/image/cache/catalog/corporategifts/Customised%20Products/customized-pu-leather-notebook-800x800.jpg");',
+						url: '/pages/mall/shop/learningMaterials'
 					},
 					{
 						title: '兑换时长',
 						ico: '../../static/svg/time.svg',
 						img: 'background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.96db53825942c485e2a1d31f1679fff3?rik=coDhrKg1RnfYrg&riu=http%3a%2f%2fpicapi.zhituad.com%2fphoto%2f69%2f35%2f46EAB.jpg&ehk=LcGVQNUtSfKbEVtiHu68jp%2bKwDpSJrvnVdQkHKCzHNM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1");',
+						url: '/pages/mall/shop/exchangeTime'
 					}
 				],
 				recommendedList: [
@@ -160,7 +171,18 @@
 			
 		},
 		methods: {
-			
+			jump(url, params, type) {
+				type = type==null?'navigateTo':type
+				// 页面的跳转
+				this.$u.route({
+					url,
+					type,
+					params
+				})
+			},
+			itemClick(index) {
+				this.jump('/pages/mall/item', this.recommendedList[index])
+			}
 		}
 	}
 </script>

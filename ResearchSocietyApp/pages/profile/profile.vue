@@ -41,7 +41,7 @@
 		<view class="order">
 			<view class="title">
 				<text>我的订单</text>
-				<text style="color: #848484;">全部订单></text>
+				<text style="color: #848484;" @click="jump('/pages/mall/application/order', {})">全部订单></text>
 			</view>
 
 			<myGrid class="grid" :myGridList="orderList" :myGridCol="4" v-slot="myGridData">
@@ -95,69 +95,84 @@
 				accountList: [
 					{
 						number: 0,
-						title: '兑换卡'
+						title: '兑换券',
+						url: '/pages/mall/application/voucher'
 					},
 					{
 						number: 0,
-						title: '优惠券'
+						title: '优惠券',
+						url: '/pages/mall/application/coupons'
 					},
 					{
 						number: 255,
-						title: '积分'
+						title: '积分',
+						url: '/pages/mall/application/earnPoints'
 					}
 				],
 				utilList: [
 					{
 						name: 'shopping-cart',
-						title: '购物车'
+						title: '购物车',
+						url: '/pages/mall/application/shoppingCart'
 					},
 					{
 						name: 'star',
-						title: '收藏'
+						title: '收藏',
+						url: '/pages/profile/application/star'
 					},
 					{
 						name: 'clock',
-						title: '足迹'
+						title: '足迹',
+						url: '/pages/profile/application/history'
 					},
 					{
 						name: 'setting',
-						title: '设置'
+						title: '设置',
+						url: '/pages/profile/application/setting'
 					},
 				],
 				orderList: [
 					{
 						name: 'order',
-						title: '待付款'
+						title: '待付款',
+						url: '/pages/mall/application/order'
 					},
 					{
 						name: 'hourglass',
-						title: '待使用'
+						title: '待使用',
+						url: '/pages/mall/application/order'
 					},
 					{
 						name: 'chat',
-						title: '待评价'
+						title: '待评价',
+						url: '/pages/mall/application/order'
 					},
 					{
 						name: 'kefu-ermai',
-						title: '退款/售后'
+						title: '退款/售后',
+						url: '/pages/mall/application/order'
 					},
 				],
 				walletList: [
 					{
 						number: '0.00元',
-						title: '余额'
+						title: '余额',
+						url: '/pages/mall/application/account'
 					},
 					{
 						number: '0时0分',
-						title: '剩余时长'
+						title: '剩余时长',
+						url: '/pages/mall/application/account'
 					},
 					{
 						number: 255,
-						title: '积分'
+						title: '积分',
+						url: '/pages/mall/application/account'
 					},
 					{
 						name: 'rmb-circle',
-						title: 'wallet'
+						title: 'wallet',
+						url: '/pages/mall/application/account'
 					}
 				],
 				recommendedList: [
@@ -214,7 +229,6 @@
 				})
 			},
 			toLogin() {
-				// this.jump('pages/login/login', {}, 'reLaunch')
 				uni.reLaunch({
 					url: '/pages/login/login'
 				})

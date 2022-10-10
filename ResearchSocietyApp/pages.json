@@ -5,6 +5,7 @@
 	},
 	
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		//tabbar页面
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -12,6 +13,16 @@
 				"enablePullDownRefresh": false,
 				"navigationBarBackgroundColor": "#fff"
 			}
+		}
+		,{
+		    "path" : "pages/mall/mall",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "积分商城",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+		    }
+		    
 		}
 	    ,{
             "path" : "pages/profile/profile",
@@ -23,16 +34,27 @@
             }
             
         }
-        ,{
-            "path" : "pages/mall/mall",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "积分商城",
-                "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#fff"
-            }
-            
-        }
+		//登录页
+		,{
+		    "path" : "pages/login/login",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "登录",
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+		    }
+		    
+		}
+		//主页功能
+		,{
+		    "path" : "pages/index/application/study",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "学习",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
         ,{
             "path" : "pages/index/appoint",
             "style" :                                                                                    
@@ -43,33 +65,221 @@
             }
             
         }
+        ,{
+            "path" : "pages/index/application/sign",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "签到",
+                "enablePullDownRefresh": false
+            }
+            
+        }
 		,{
-		    "path" : "pages/login/login",
+		    "path" : "pages/index/application/addTime",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false,
-				"navigationStyle":"custom"
+		        "navigationBarTitleText": "续时",
+		        "enablePullDownRefresh": false
 		    }
 		    
 		}
+		,{
+		    "path" : "pages/index/application/sort",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "排行榜",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/index/application/exchange",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "积分兑换",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/index/application/friend",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "学友匹配",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/index/application/notice",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "公告",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/index/application/feedback",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "反馈",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/index/application/editor",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "编辑",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		//商城页功能
         ,{
-            "path" : "pages/login/register",
+            "path" : "pages/mall/application/sort",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationStyle":"custom"
+                "navigationBarTitleText": "分类",
+                "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/login/find",
+            "path" : "pages/mall/application/shoppingCart",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationStyle":"custom"
+                "navigationBarTitleText": "购物车",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/application/order",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/application/account",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "账户",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/application/voucher",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "兑换券",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/application/coupons",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "优惠券",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/application/earnPoints",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "赚积分",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/application/editor",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "编辑",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/shop/milkTeaShop",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "奶茶铺子",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/shop/snackShop",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "零食铺子",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/shop/learningMaterials",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "学习资料",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/shop/exchangeTime",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "兑换时长",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mall/item",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品",
+                "enablePullDownRefresh": false
+            }
+
+        }
+		//我的页面功能
+        ,{
+            "path" : "pages/profile/application/star",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "收藏",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/profile/application/history",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "足迹",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/profile/application/setting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "设置",
+                "enablePullDownRefresh": false
             }
             
         }

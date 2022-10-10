@@ -57,60 +57,72 @@
 					{
 						name: 'calendar-fill',
 						color: '#ff557f',
-						title: '签到'
+						title: '签到',
+						url: '/pages/index/application/sign'
 					},
 					{
 						name: 'clock-fill',
 						color: '#ffff00',
-						title: '续时'
+						title: '续时',
+						url: '/pages/index/application/addTime'
 					},
 					{
 						name: 'grid-fill',
 						color: '#55ff7f',
-						title: '排行榜'
+						title: '排行榜',
+						url: '/pages/index/application/sort'
 					},
 					{
 						name: 'gift-fill',
 						color: '#aa55ff',
-						title: '积分兑换'
+						title: '积分兑换',
+						url: '/pages/index/application/exchange'
 					},
 					{
 						name: 'man-add-fill',
 						color: '#00ffff',
-						title: '学友匹配'
+						title: '学友匹配',
+						url: '/pages/index/application/friend'
 					},
 					{
 						name: 'pushpin-fill',
 						color: '#aaff7f',
-						title: '公告'
+						title: '公告',
+						url: '/pages/index/application/notice'
 					},
 					{
 						name: 'error-circle-fill',
 						color: '#ffaaff',
-						title: '反馈'
+						title: '反馈',
+						url: '/pages/index/application/feedback'
 					},
 					{
 						name: 'setting-fill',
 						color: '#a2a2a2',
-						title: '编辑'
+						title: '编辑',
+						url: '/pages/index/application/editor'
 					}
 				],
 				messageList: [
 					{
 						title: '学习总时长',
-						message: '48时30分'
+						message: '48时30分',
+						url: 'pages/index/application/study'
 					},
 					{
 						title: '今日学习时长',
-						message: '2时50分'
+						message: '2时50分',
+						url: 'pages/index/application/study'
 					},
 					{
 						title: '剩余时长',
-						message: '1时40分'
+						message: '1时40分',
+						url: 'pages/index/application/study'
 					},
 					{
 						title: '排名',
-						message: '1'
+						message: '1',
+						url: 'pages/index/application/study'
 					}
 				]
 			}

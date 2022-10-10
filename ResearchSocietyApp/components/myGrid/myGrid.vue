@@ -25,8 +25,11 @@
 			};
 		},
 		methods: {
-			gridClick(e) {
-				console.log(e)
+			gridClick(index) {
+				// 页面的跳转
+				this.$u.route({
+					url: this.myGridList[index].url
+				})
 			}
 		}
 	}

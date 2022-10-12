@@ -131,18 +131,20 @@
 			
 		},
 		methods: {
+			jump(url, params, type) {
+				type = type==null?'navigateTo':type
+				// 页面的跳转
+				this.$u.route({
+					url,
+					type,
+					params
+				})
+			},
 			change() {
 				
 			},
 			click(e) {
 				console.log(e)
-			},
-			jump(path, params) {
-				// 页面的跳转
-				this.$u.route({
-					url: path,
-					params
-				})
 			},
 			toAppoint() {
 				this.jump('pages/index/appoint', {})

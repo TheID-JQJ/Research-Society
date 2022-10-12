@@ -229,9 +229,7 @@
 				})
 			},
 			toLogin() {
-				uni.reLaunch({
-					url: '/pages/login/login'
-				})
+				this.jump('/pages/login/login', {}, 'reLaunch')
 			}
 		}
 	}

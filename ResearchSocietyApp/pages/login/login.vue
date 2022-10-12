@@ -92,15 +92,6 @@
 			
 		},
 		methods: {
-			login() {
-				uni.switchTab({
-					url: '/pages/index/index'
-				})
-			},
-			submit() {
-				this.login()
-			},
-			
 			jump(url, params, type) {
 				type = type==null?'navigateTo':type
 				// 页面的跳转
@@ -109,6 +100,12 @@
 					type,
 					params
 				})
+			},
+			login() {
+				this.jump('/pages/index/index', {}, 'tab')
+			},
+			submit() {
+				this.login()
 			}
 		}
 	}

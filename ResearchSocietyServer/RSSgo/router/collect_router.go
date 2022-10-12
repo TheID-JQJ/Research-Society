@@ -10,4 +10,5 @@ func CollectRouter(r *gin.Engine) {
 	//测试
 	testGroup := r.Group("/api/test")
 	testGroup.GET("/hello", controller.TestHello)
+	testGroup.POST("/insert", controller.TestInsert)
 }

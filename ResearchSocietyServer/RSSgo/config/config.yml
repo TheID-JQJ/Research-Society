@@ -1,0 +1,11 @@
+mysql:
+  username: root
+  password: root
+  address: localhost:3306
+  databases: rss
+  params: charset=utf8mb4&parseTime=True&loc=Local
+
+jwt:
+  secret: d28c70b5ce371222495ca54c1af51608
+  expire: 604800
+  header: Authorization

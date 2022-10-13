@@ -83,7 +83,8 @@
 .content {
 	width: 100vw;
 	height: 100vh;
-	background-color: #007AFF;
+	// background-color: #007AFF;
+	background-image: linear-gradient(to bottom right ,#aaaaff, #00ffff);
 	
 	display: flex;
 	justify-content: space-around;

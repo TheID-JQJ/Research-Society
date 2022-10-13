@@ -1,0 +1,202 @@
+basePath: /api
+host: localhost
+info:
+  contact:
+    email: hkchenjianhui@foxmail.com
+    name: hkc
+    url: http://hkc.ink
+  description: 研学社-go-后端接口
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: 研学社
+  version: "1.0"
+paths:
+  /test/delete/{id}:
+    post:
+      consumes:
+      - application/json
+      description: test delete
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: ""
+        "400":
+          description: Bad Request
+          schema:
+            type: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            type: ""
+      summary: test delete
+      tags:
+      - test
+  /test/get/{id}:
+    get:
+      consumes:
+      - application/json
+      description: test get
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: User
+        "400":
+          description: Bad Request
+          schema:
+            type: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            type: ""
+      summary: test get
+      tags:
+      - test
+  /test/get/all:
+    get:
+      consumes:
+      - application/json
+      description: test getAll
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: list
+        "400":
+          description: Bad Request
+          schema:
+            type: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            type: ""
+      summary: test getAll
+      tags:
+      - test
+  /test/hello:
+    get:
+      consumes:
+      - application/json
+      description: test
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: test
+      tags:
+      - test
+  /test/insert:
+    post:
+      consumes:
+      - application/json
+      description: test insert
+      parameters:
+      - description: user
+        in: body
+        name: userDto
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: ""
+        "400":
+          description: Bad Request
+          schema:
+            type: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            type: ""
+      summary: test insert
+      tags:
+      - test
+  /test/register:
+    post:
+      consumes:
+      - application/json
+      description: test register
+      parameters:
+      - description: register
+        in: body
+        name: registerDto
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            type: ""
+      summary: test register
+      tags:
+      - test
+  /test/update:
+    post:
+      consumes:
+      - application/json
+      description: test update
+      parameters:
+      - description: user
+        in: body
+        name: userDto
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: ""
+        "400":
+          description: Bad Request
+          schema:
+            type: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            type: ""
+      summary: test update
+      tags:
+      - test
+swagger: "2.0"

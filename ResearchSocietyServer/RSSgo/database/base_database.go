@@ -10,11 +10,12 @@ import (
 )
 
 var db *gorm.DB
+var viperUtil utils.ViperUtil
 
 // 初始化数据库
 func InitDB() *gorm.DB {
 	//读取配置文件，加载配置
-	mysqlConfig := utils.ViperUtil("database_config.yml", "mysql")
+	mysqlConfig := viperUtil.Read("config.yml", "mysql")
 	username := mysqlConfig["username"].(string)
 	password := mysqlConfig["password"].(string)
 	address := mysqlConfig["address"].(string)

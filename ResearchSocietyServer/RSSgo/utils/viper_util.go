@@ -7,9 +7,11 @@ import (
 	"github.com/spf13/viper"
 )
 
-//viper框架的封装
+// viper框架的封装
+type ViperUtil struct {
+}
 
-func ViperUtil(file string, param string) map[string]interface{} {
+func (ViperUtil) Read(file string, param string) map[string]interface{} {
 	s := strings.Split(file, ".")
 	fileName := s[0]
 	fileSuffix := s[1]

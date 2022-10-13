@@ -1,6 +1,0 @@
-mysql:
-  username: root
-  password: root
-  address: localhost:3306
-  databases: rss
-  params: charset=utf8mb4&parseTime=True&loc=Local

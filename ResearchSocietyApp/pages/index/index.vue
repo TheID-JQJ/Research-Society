@@ -50,8 +50,8 @@
 			return {
 				title: 'index',
 				swiperList: [
-					'https://img.ruanwenpu.com/Public/upfiles/60291/202104/20210409113856123009.jpg',
-					'https://pic1.zhimg.com/v2-30effef829f9e1647e3644d18b9e3eea_r.jpg?source=172ae18b'
+					'../../static/img/20210409113856123009.jpg',
+					'../../static/img/v2-30effef829f9e1647e3644d18b9e3eea_r.jpg'
 				],
 				applicationList: [
 					{

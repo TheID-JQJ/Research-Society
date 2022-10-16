@@ -15,6 +15,7 @@ import (
 
 var userService service.UserService
 var jwtUtil utils.JwtUtil
+var valUtil utils.ValidatorUtil
 
 // @Summary test
 // @Description test
@@ -43,6 +44,10 @@ func TestRegister(ctx *gin.Context) {
 	rm := dto.RegisterDto{}
 	if err := ctx.ShouldBindJSON(&rm); err != nil {
 		log.Println("数据绑定失败：" + err.Error())
+		if s := valUtil.GetError(err, rm); s != "" {
+			response.Fail(ctx, s)
+			return
+		}
 		response.Response(ctx, http.StatusOK, 500, gin.H{}, "注册失败")
 		return
 	}
@@ -51,7 +56,7 @@ func TestRegister(ctx *gin.Context) {
 
 	//判断是否存在账号
 	if userService.ExistEmail(db, rm.Email) {
-		response.Fail(ctx, gin.H{}, "邮箱已被注册")
+		response.Fail(ctx, "邮箱已被注册")
 		return
 	}
 
@@ -80,14 +85,19 @@ func TestInsert(ctx *gin.Context) {
 	ud := dto.UserDto{}
 	if err := ctx.ShouldBindJSON(&ud); err != nil {
 		log.Println("数据绑定失败：" + err.Error())
+		if s := valUtil.GetError(err, ud); s != "" {
+			response.Fail(ctx, s)
+			return
+		}
 		response.Response(ctx, http.StatusOK, 500, gin.H{}, "创建失败")
 		return
 	}
+
 	db := database.GetDB()
 
 	//判断是否存在账号
 	if userService.ExistEmail(db, ud.Email) {
-		response.Fail(ctx, gin.H{}, "邮箱已被使用")
+		response.Fail(ctx, "邮箱已被使用")
 		return
 	}
 
@@ -121,13 +131,13 @@ func TestDelete(ctx *gin.Context) {
 	intId, err := strconv.Atoi(id)
 	if err != nil {
 		log.Println("id转换失败：" + err.Error())
-		response.Fail(ctx, gin.H{}, "用户id输入错误")
+		response.Fail(ctx, "用户id输入错误")
 		return
 	}
 
 	if err := userService.DeleteByID(db, uint(intId)); err != nil {
 		log.Println("sql执行错误：" + err.Error())
-		response.Fail(ctx, gin.H{}, "删除失败")
+		response.Fail(ctx, "删除失败")
 		return
 	}
 	response.Success(ctx, gin.H{}, "删除成功")
@@ -148,6 +158,10 @@ func TestUpdate(ctx *gin.Context) {
 	ud := dto.UserDto{}
 	if err := ctx.ShouldBindJSON(&ud); err != nil {
 		log.Println("数据绑定失败：" + err.Error())
+		if s := valUtil.GetError(err, ud); s != "" {
+			response.Fail(ctx, s)
+			return
+		}
 		response.Response(ctx, http.StatusOK, 500, gin.H{}, "修改失败")
 		return
 	}
@@ -157,7 +171,7 @@ func TestUpdate(ctx *gin.Context) {
 	// 执行修改并返回结果
 	if err := userService.Update(db, ud.ToUserModel()); err != nil {
 		log.Println("sql执行错误：" + err.Error())
-		response.Fail(ctx, gin.H{}, "修改失败")
+		response.Fail(ctx, "修改失败")
 		return
 	}
 	response.Success(ctx, gin.H{}, "修改成功")
@@ -182,7 +196,7 @@ func TestGet(ctx *gin.Context) {
 	intId, err := strconv.Atoi(id)
 	if err != nil {
 		log.Println("id转换失败：" + err.Error())
-		response.Fail(ctx, gin.H{}, "用户id输入错误")
+		response.Fail(ctx, "用户id输入错误")
 		return
 	}
 
@@ -190,7 +204,7 @@ func TestGet(ctx *gin.Context) {
 	user, err := userService.GetByID(db, uint(intId))
 	if err != nil {
 		log.Println("sql执行错误：" + err.Error())
-		response.Fail(ctx, gin.H{}, "用户不存在")
+		response.Fail(ctx, "用户不存在")
 		return
 	}
 	response.Success(ctx, gin.H{"user": user}, "查询成功")
@@ -212,7 +226,7 @@ func TestGetAll(ctx *gin.Context) {
 	users, err := userService.GetAll(db)
 	if err != nil {
 		log.Println("sql执行错误：" + err.Error())
-		response.Fail(ctx, gin.H{}, "查询失败")
+		response.Fail(ctx, "查询失败")
 		return
 	}
 	response.Success(ctx, gin.H{"users": users}, "查询成功")

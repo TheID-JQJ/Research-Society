@@ -7,8 +7,8 @@ import (
 
 type UserDto struct {
 	ID       uint   `json:"id"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
+	Email    string `json:"email" binding:"required,email" required_msg:"邮箱不能为空" email_msg:"邮箱格式不正确"`
+	Password string `json:"password" binding:"required" required_msg:"密码不能为空"`
 }
 
 func (ud UserDto) ToUserModel() *model.User {
@@ -16,8 +16,8 @@ func (ud UserDto) ToUserModel() *model.User {
 }
 
 type RegisterDto struct {
-	Email    string `json:"email"`
-	Password string `json:"password"`
+	Email    string `json:"email" binding:"required,email" required_msg:"邮箱不能为空" email_msg:"邮箱格式不正确"`
+	Password string `json:"password" binding:"required" required_msg:"密码不能为空"`
 }
 
 func (rd RegisterDto) ToUserModel() *model.User {

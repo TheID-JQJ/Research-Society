@@ -14,7 +14,7 @@ import (
 func CollectRouter(r *gin.Engine) {
 	//测试
 	testGroup := r.Group("/api/test")
-	testGroup.GET("/hello", middleware.AuthMiddleware(), controller.TestHello)
+	testGroup.GET("/hello", middleware.AuthMiddleware(), middleware.CasbinHandler(), controller.TestHello)
 	testGroup.POST("/register", controller.TestRegister)
 	testGroup.POST("/insert", controller.TestInsert)
 	testGroup.POST("/delete/:id", controller.TestDelete)

@@ -1,6 +1,10 @@
 package main
 
-import "hkc.ink/rss/cmd"
+import (
+	"fmt"
+
+	"hkc.ink/rss/cmd"
+)
 
 // @title 研学社
 // @version 1.0
@@ -19,4 +23,5 @@ import "hkc.ink/rss/cmd"
 
 func main() {
 	cmd.Execute()
+	fmt.Println()
 }

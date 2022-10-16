@@ -16,9 +16,9 @@ func (ViperUtil) Read(file string, param string) map[string]interface{} {
 	fileName := s[0]
 	fileSuffix := s[1]
 
-	viper.SetConfigName(fileName)    // 文件名
-	viper.SetConfigType(fileSuffix)  // 文件后缀
-	viper.AddConfigPath("./config/") // 查找路径
+	viper.SetConfigName(fileName)   // 文件名
+	viper.SetConfigType(fileSuffix) // 文件后缀
+	viper.AddConfigPath("config/")  // 查找路径
 
 	if err := viper.ReadInConfig(); err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); ok {

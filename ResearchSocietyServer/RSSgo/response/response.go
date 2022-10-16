@@ -20,6 +20,6 @@ func Success(ctx *gin.Context, data gin.H, message string) {
 	Response(ctx, http.StatusOK, 200, data, message)
 }
 
-func Fail(ctx *gin.Context, data gin.H, message string) {
-	Response(ctx, http.StatusOK, 400, data, message)
+func Fail(ctx *gin.Context, message string) {
+	Response(ctx, http.StatusOK, 400, gin.H{}, message)
 }

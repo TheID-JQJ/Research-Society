@@ -16,4 +16,6 @@ func Execute() {
 	r := gin.Default()
 	router.CollectRouter(r)
 	r.Run(":8080")
+	//优雅的重启
+	// endless.ListenAndServe(":8080", r)
 }

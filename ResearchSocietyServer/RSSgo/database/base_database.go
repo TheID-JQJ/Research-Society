@@ -25,11 +25,11 @@ func InitDB() *gorm.DB {
 	dsn := username + ":" + password + "@tcp(" + address + ")/" + databases + "?" + params
 
 	//连接数据库
-	var err error
-	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
-	if err != nil {
+	if initDB, err := gorm.Open(mysql.Open(dsn), &gorm.Config{}); err != nil {
 		log.Println("failed to connect database:" + err.Error())
 		return nil
+	} else {
+		db = initDB
 	}
 
 	// 迁移 schema

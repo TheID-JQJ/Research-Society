@@ -67,8 +67,9 @@
 		
 		text-align: center;
 		line-height: 50vw;
-		font-size: larger;
+		font-size: xx-large;
 		font-weight: bold;
+		color: #fff;
 	}
 }
 </style>

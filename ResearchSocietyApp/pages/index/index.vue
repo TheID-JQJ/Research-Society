@@ -17,7 +17,8 @@
 		<myLayout class="message" :myLayoutList="messageList" :myLayoutGutter="20" v-slot="myLayoutData">
 			<view class="size">
 				<h3 class="title-size">{{myLayoutData.item.title}}</h3>
-				<text class="text-size">{{myLayoutData.item.message}}</text>
+				<!-- <text class="text-size">{{myLayoutData.item.message}}</text> -->
+				<u-count-to :startVal="0" :endVal="myLayoutData.item.message" :bold="true"></u-count-to>
 			</view>
 		</myLayout>
 		
@@ -105,23 +106,23 @@
 				],
 				messageList: [
 					{
-						title: '学习总时长',
-						message: '48时30分',
+						title: '学习总时长(/分钟)',
+						message: 600,
 						url: 'pages/index/application/study'
 					},
 					{
-						title: '今日学习时长',
-						message: '2时50分',
+						title: '今日学习时长(/分钟)',
+						message: 100,
 						url: 'pages/index/application/study'
 					},
 					{
-						title: '剩余时长',
-						message: '1时40分',
+						title: '剩余时长(/分钟)',
+						message: 80,
 						url: 'pages/index/application/study'
 					},
 					{
 						title: '排名',
-						message: '1',
+						message: 1,
 						url: 'pages/index/application/study'
 					}
 				]
@@ -182,10 +183,10 @@
 			font-weight: normal;
 		}
 		
-		.text-size {
-			font-size: large;
-			font-weight: bold;
-		}
+		// .text-size {
+		// 	font-size: large;
+		// 	font-weight: bold;
+		// }
 	}
 	
 	.application-background {

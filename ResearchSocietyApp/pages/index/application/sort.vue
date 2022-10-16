@@ -66,6 +66,9 @@
 		methods: {
 			tabsChange() {
 				console.log("change")
+			},
+			scrolltolower() {
+				
 			}
 		}
 	}

@@ -42,18 +42,17 @@
 
 <style lang="scss" scoped>
 .content{
+	background-image: linear-gradient(#aaaaff, #00ffff);
 	width: 100vw;
 	height: 100vh;
-	background-image: linear-gradient(#aaaaff, #00ffff);
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding-top: 10vh;
+	position: fixed;
 	
 	.back {
+		z-index: 99;
 		position: absolute;
-		top: 80rpx;
-		left: 50rpx;
+		top: 5vh;
+		left: 2vh;
 		color: #fff;
 	}
 	
@@ -61,13 +60,15 @@
 		width: 50vw;
 		height: 50vw;
 		background-color: rgba($color: #fff, $alpha: .5);
-		// border: 1rpx solid #000000;
 		border-radius: 50%;
 		box-shadow: 5px 8px 10px #888888;
-		
+		position: absolute;
+		top: 50vh;
+		left: 50vw;
+		transform: translateX(-50%) translateY(-50%);
 		text-align: center;
 		line-height: 50vw;
-		font-size: xx-large;
+		font-size: x-large;
 		font-weight: bold;
 		color: #fff;
 	}

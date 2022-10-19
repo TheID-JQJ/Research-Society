@@ -17,7 +17,6 @@
 		<myLayout class="message" :myLayoutList="messageList" :myLayoutGutter="20" v-slot="myLayoutData">
 			<view class="size">
 				<h3 class="title-size">{{myLayoutData.item.title}}</h3>
-				<!-- <text class="text-size">{{myLayoutData.item.message}}</text> -->
 				<u-count-to :startVal="0" :endVal="myLayoutData.item.message" :bold="true"></u-count-to>
 			</view>
 		</myLayout>
@@ -65,7 +64,7 @@
 						name: 'clock-fill',
 						color: '#ffff00',
 						title: '续时',
-						url: '/pages/index/application/addTime'
+						url: "/pages/mall/application/account"
 					},
 					{
 						name: 'grid-fill',
@@ -77,7 +76,7 @@
 						name: 'gift-fill',
 						color: '#aa55ff',
 						title: '积分兑换',
-						url: '/pages/index/application/exchange'
+						url: '/pages/mall/application/sort'
 					},
 					{
 						name: 'man-add-fill',
@@ -182,11 +181,6 @@
 			font-size: small;
 			font-weight: normal;
 		}
-		
-		// .text-size {
-		// 	font-size: large;
-		// 	font-weight: bold;
-		// }
 	}
 	
 	.application-background {

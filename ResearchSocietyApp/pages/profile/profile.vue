@@ -3,8 +3,12 @@
 		<!-- 账号信息 -->
 		<view class="account-background">
 			<view class="account">
-				<view class="appoint" @click="toLogin">
-					头像
+				<view class="appoint">
+					<u-avatar
+						shape="circle"
+						size="100%"
+						src="../../static/img/20210409113856123009.jpg"
+					></u-avatar>
 				</view>
 				
 				<view class="user">
@@ -143,13 +147,13 @@
 						url: '/pages/mall/application/order'
 					},
 					{
-						name: 'chat',
-						title: '待评价',
+						name: 'checkmark-circle',
+						title: '已完成',
 						url: '/pages/mall/application/order'
 					},
 					{
 						name: 'kefu-ermai',
-						title: '退款/售后',
+						title: '退款',
 						url: '/pages/mall/application/order'
 					},
 				],
@@ -227,9 +231,6 @@
 					type,
 					params
 				})
-			},
-			toLogin() {
-				this.jump('/pages/login/login', {}, 'reLaunch')
 			}
 		}
 	}
@@ -256,17 +257,11 @@
 			.appoint {
 				width: 200rpx;
 				height: 200rpx;
-				background-color: #00ff00;
-				border-radius: 50%;
-				
-				color: #fff;
-				text-align: center;
-				line-height: 200rpx;
 				
 				position: absolute;
 				top: -100rpx;
 				left: 50%;
-				margin-left: -100rpx;
+				transform: translateX(-50%);
 			}
 			
 			.user {

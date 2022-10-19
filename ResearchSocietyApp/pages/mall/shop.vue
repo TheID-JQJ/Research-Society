@@ -4,24 +4,24 @@
 			< 返回
 		</view>
 		
+		<!-- 搜索框 -->
+		<view class="search">
+			<u-search></u-search>
+		</view>
+		
 		<view class="body">
-			<view class="body-item" v-for="item, index in goodsList">
-				<view class="goods-img" :style="item.img" @click="toItem(item)">
-				</view>
-				<view class="goods-message" @click="toItem(item)">
-					<h3 class="title">{{item.title}}</h3>
-					<view class="price">
-						<text class="price-int">￥{{item.priceInt}}</text>
-						<text class="price-float">.{{item.priceFloat}}</text>
+			<myLayout class="recommended" :myLayoutList="recommendedList" :myLayoutGutter="10" v-slot="myLayoutData">
+				<view class="recommended-content">
+					<view class="recommended-img" :style="myLayoutData.item.img" />
+					<h3 class="recommended-title">{{myLayoutData.item.title}}</h3>
+					<text class="recommended-text">月售{{myLayoutData.item.sales}}</text>
+					<view class="recommended-price">
+						<text class="recommended-price-int">￥{{myLayoutData.item.priceInt}}</text>
+						<text class="recommended-price-float">.{{myLayoutData.item.priceFloat}}</text>/
+						<text class="recommended-price-integral">{{myLayoutData.item.integral}}积分</text>
 					</view>
-					<text class="text">数量：{{item.sales}}</text>
-					<text class="message" style="color: #2979FF;">详情 ></text>
 				</view>
-				<view class="goods-botton">
-					<u-button shape="circle" style="height: 8vw;">退款</u-button>
-					<u-button type="error" shape="circle" style="height: 8vw;">去使用</u-button>
-				</view>
-			</view>
+			</myLayout>
 		</view>
 	</view>
 </template>
@@ -30,7 +30,7 @@
 	export default {
 		data() {
 			return {
-				goodsList: [
+				recommendedList: [
 					{
 						img: 'background-image: url("https://img.zcool.cn/community/01206b5e7884aaa80120a89582caf9.jpg@1280w_1l_2o_100sh.jpg");',
 						imgUrl: 'https://img.zcool.cn/community/01206b5e7884aaa80120a89582caf9.jpg@1280w_1l_2o_100sh.jpg',
@@ -38,8 +38,7 @@
 						sales: 100,
 						priceInt: 6,
 						priceFloat: 5,
-						integral: 650,
-						kid: 1
+						integral: 650
 					},
 					{
 						img: 'background-image: url("https://ossmuyuanec.oss-cn-beijing.aliyuncs.com/Storage/Shop/1221/Products/17977/1.png");',
@@ -48,8 +47,7 @@
 						sales: 100,
 						priceInt: 3,
 						priceFloat: 0,
-						integral: 300,
-						kid: 2
+						integral: 300
 					},
 					{
 						img: 'background-image: url("https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1");',
@@ -58,8 +56,7 @@
 						sales: 100,
 						priceInt: 1,
 						priceFloat: 0,
-						integral: 100,
-						kid: 3
+						integral: 100
 					},
 					{
 						img: 'background-image: url("https://www.amphasisdesign.com/image/cache/catalog/corporategifts/Customised%20Products/customized-pu-leather-notebook-800x800.jpg");',
@@ -68,8 +65,16 @@
 						sales: 100,
 						priceInt: 1,
 						priceFloat: 0,
-						integral: 100,
-						kid: 4
+						integral: 100
+					},
+					{
+						img: 'background-image: url("https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1");',
+						imgUrl: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1',
+						title: '干脆面',
+						sales: 100,
+						priceInt: 1,
+						priceFloat: 0,
+						integral: 100
 					},
 					{
 						img: 'background-image: url("https://www.amphasisdesign.com/image/cache/catalog/corporategifts/Customised%20Products/customized-pu-leather-notebook-800x800.jpg");',
@@ -78,8 +83,16 @@
 						sales: 100,
 						priceInt: 1,
 						priceFloat: 0,
-						integral: 100,
-						kid: 4
+						integral: 100
+					},
+					{
+						img: 'background-image: url("https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1");',
+						imgUrl: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1',
+						title: '干脆面',
+						sales: 100,
+						priceInt: 1,
+						priceFloat: 0,
+						integral: 100
 					},
 					{
 						img: 'background-image: url("https://www.amphasisdesign.com/image/cache/catalog/corporategifts/Customised%20Products/customized-pu-leather-notebook-800x800.jpg");',
@@ -88,8 +101,16 @@
 						sales: 100,
 						priceInt: 1,
 						priceFloat: 0,
-						integral: 100,
-						kid: 4
+						integral: 100
+					},
+					{
+						img: 'background-image: url("https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1");',
+						imgUrl: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1',
+						title: '干脆面',
+						sales: 100,
+						priceInt: 1,
+						priceFloat: 0,
+						integral: 100
 					},
 					{
 						img: 'background-image: url("https://www.amphasisdesign.com/image/cache/catalog/corporategifts/Customised%20Products/customized-pu-leather-notebook-800x800.jpg");',
@@ -98,10 +119,9 @@
 						sales: 100,
 						priceInt: 1,
 						priceFloat: 0,
-						integral: 100,
-						kid: 4
+						integral: 100
 					}
-				],
+				]
 			}
 		},
 		methods: {
@@ -117,9 +137,9 @@
 			back() {
 				this.jump('', {}, 'back')
 			},
-			toItem(item) {
-				this.jump('/pages/mall/item', item)
-			},
+			itemClick(index) {
+				this.jump('/pages/mall/item', this.recommendedList[index])
+			}
 		}
 	}
 </script>
@@ -134,62 +154,61 @@
 	
 	.back {
 		z-index: 99;
-		position: absolute;
+		position: fixed;
 		top: 5vh;
 		left: 2vh;
 		color: #fff;
 	}
 	
-	.body {
-		height: 85vh;
-		background-color: rgba($color: #fff, $alpha: .3);
-		margin: 20rpx;
+	.search {
 		padding: 20rpx;
 		padding-top: 0;
-		border-radius: 20rpx;
+	}
+	
+	.body {
+		height: 83vh;
 		overflow: scroll;
 		
-		.body-item {			
-			width: 100%;
-			height: 30vw;
-			background-color: rgba($color: #fff, $alpha: .5);
-			margin-top: 20rpx;
-			border-radius: 20rpx;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			
-			.goods-img {
-				width: 20vw;
-				height: 20vw;
-				background-size: 100% 100%;
+		.recommended {
+			margin: 20rpx;
+			.recommended-content {
+				background-color: rgba($color: #fff, $alpha: .5);
+				margin-bottom: 20rpx;
 				border-radius: 20rpx;
-			}
-			
-			.goods-message {
-				width: 30vw;
-				height: 100%;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-around;
 				
-				.title {
-					font-size: medium;
+				.recommended-img {
+					height: 350rpx;
+					background-size:100% 100%;
+					background-repeat:no-repeat;
+					
+					border-radius: 20rpx 20rpx 0 0 ;
+				}
+				
+				.recommended-title {
+					margin-left: 20rpx;
 					font-weight: normal;
 				}
 				
-				.price,
-				.text,
-				.message {
+				.recommended-text {
+					margin-left: 20rpx;
+					
+					color: #848484;
 					font-size: small;
 				}
-			}
-			
-			.goods-botton {
-				height: 100%;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-around;
+				
+				.recommended-price {
+					margin: 20rpx 0 20rpx 20rpx;
+					display: flex;
+					
+					color: #f00;
+					line-height: 50rpx;
+					
+					.recommended-price-float,
+					.recommended-price-integral {
+						font-size: small;
+						line-height: 55rpx;
+					}
+				}
 			}
 		}
 	}

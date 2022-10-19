@@ -78,29 +78,12 @@
             
         }
 		,{
-		    "path" : "pages/index/application/addTime",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "续时",
-		        "enablePullDownRefresh": false
-		    }
-		    
-		}
-		,{
 		    "path" : "pages/index/application/sort",
 		    "style" :                                                                                    
 		    {
 		        "navigationBarTitleText": "排行榜",
-		        "enablePullDownRefresh": false
-		    }
-		    
-		}
-		,{
-		    "path" : "pages/index/application/exchange",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "积分兑换",
-		        "enablePullDownRefresh": false
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
 		    }
 		    
 		}
@@ -109,7 +92,8 @@
 		    "style" :                                                                                    
 		    {
 		        "navigationBarTitleText": "学友匹配",
-		        "enablePullDownRefresh": false
+		        "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
 		    }
 		    
 		}
@@ -146,7 +130,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "分类",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -155,7 +140,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "购物车",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -164,7 +150,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "订单",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -173,7 +160,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "账户",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -182,7 +170,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "兑换券",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -191,7 +180,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "优惠券",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -200,7 +190,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "赚积分",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -214,38 +205,12 @@
             
         }
         ,{
-            "path" : "pages/mall/shop/milkTeaShop",
+            "path" : "pages/mall/shop",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "奶茶铺子",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/mall/shop/snackShop",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "零食铺子",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/mall/shop/learningMaterials",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "学习资料",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/mall/shop/exchangeTime",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "兑换时长",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "铺子",
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -254,7 +219,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "商品",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"transparentTitle": "auto"
             }
 
         }
@@ -264,7 +230,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "收藏",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -273,7 +240,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "足迹",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
             }
             
         }
@@ -297,8 +265,6 @@
 		"color":"#000",
 		"selectedColor":"#000",
 		"backgroundColor":"#fff",
-		// "borderStyle":"#fff",
-		// "height":"60px",
 		"list": [{
 			"pagePath": "pages/index/index",
 			"iconPath":"static/tabbar/home-line.png",

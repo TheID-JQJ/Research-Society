@@ -1,4 +1,4 @@
-<template>
+ <template>
 	<view class="content">
 		<view class="back" @click="back()">
 			< 返回
@@ -173,9 +173,10 @@
 
 <style lang="scss" scoped>
 .content {
+	background-image: linear-gradient(#aaaaff, #00ffff);
 	width: 100vw;
 	height: 100vh;
-	background-image: linear-gradient(#aaaaff, #00ffff);
+	// padding-top: 10vh;
 	position: fixed;
 	overflow: scroll;
 	transform-style: preserve-3d;
@@ -184,8 +185,8 @@
 	.back {
 		z-index: 99;
 		position: absolute;
-		top: 80rpx;
-		left: 50rpx;
+		top: 5vh;
+		left: 2vh;
 		color: #fff;
 	}
 	
@@ -251,7 +252,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		background-color: rgba($color: #fff, $alpha: .5);
+		background-color: rgba($color: #fff, $alpha: .3);
 		border-radius: 40rpx;
 		overflow: scroll;
 		
@@ -259,7 +260,8 @@
 			z-index: 99;
 			width: 10vw;
 			height: 10vw;
-			background-color: #fff;
+			// background-color: #fff;
+			background-color: rgba($color: #fff, $alpha: .5);
 			margin: 20rpx;
 			border-radius: 20rpx;
 			

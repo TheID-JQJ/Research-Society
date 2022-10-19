@@ -25,7 +25,7 @@
 				// 页面的跳转
 				this.$u.route({
 					url: this.myLayoutList[index].url==null?'/pages/mall/item':this.myLayoutList[index].url,
-					params: this.myLayoutList[index].url==null?this.myLayoutList[index]:{}
+					params: this.myLayoutList[index]
 				})
 			}
 		}

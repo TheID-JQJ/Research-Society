@@ -36,7 +36,7 @@
 			<view class="recommended-content">
 				<view class="recommended-img" :style="myLayoutData.item.img" />
 				<h3 class="recommended-title">{{myLayoutData.item.title}}</h3>
-				<text class="recommended-text">{{myLayoutData.item.score}}分 | 月售{{myLayoutData.item.sales}}</text>
+				<text class="recommended-text">月售{{myLayoutData.item.sales}}</text>
 				<view class="recommended-price">
 					<text class="recommended-price-int">￥{{myLayoutData.item.priceInt}}</text>
 					<text class="recommended-price-float">.{{myLayoutData.item.priceFloat}}</text>/
@@ -106,41 +106,41 @@
 						title: '奶茶铺子',
 						ico: '../../static/svg/milkTea.svg',
 						img: 'background-image: url("https://tse1-mm.cn.bing.net/th/id/OIP-C.ZJUMQOtHPnWLkVuPxjVSSwHaIv?pid=ImgDet&rs=1");',
-						url: '/pages/mall/shop/milkTeaShop'
+						url: '/pages/mall/shop'
 					},
 					{
 						title: '零食铺子',
 						ico: '../../static/svg/snacks.svg',
 						img: 'background-image: url("https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1");',
-						url: '/pages/mall/shop/snackShop'
+						url: '/pages/mall/shop'
 					},
 					{
 						title: '学习资料',
 						ico: '../../static/svg/study.svg',
 						img: 'background-image: url("https://www.amphasisdesign.com/image/cache/catalog/corporategifts/Customised%20Products/customized-pu-leather-notebook-800x800.jpg");',
-						url: '/pages/mall/shop/learningMaterials'
+						url: '/pages/mall/shop'
 					},
 					{
 						title: '兑换时长',
 						ico: '../../static/svg/time.svg',
 						img: 'background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.96db53825942c485e2a1d31f1679fff3?rik=coDhrKg1RnfYrg&riu=http%3a%2f%2fpicapi.zhituad.com%2fphoto%2f69%2f35%2f46EAB.jpg&ehk=LcGVQNUtSfKbEVtiHu68jp%2bKwDpSJrvnVdQkHKCzHNM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1");',
-						url: '/pages/mall/shop/exchangeTime'
+						url: 'pages/mall/application/account'
 					}
 				],
 				recommendedList: [
 					{
 						img: 'background-image: url("https://img.zcool.cn/community/01206b5e7884aaa80120a89582caf9.jpg@1280w_1l_2o_100sh.jpg");',
+						imgUrl: 'https://img.zcool.cn/community/01206b5e7884aaa80120a89582caf9.jpg@1280w_1l_2o_100sh.jpg',
 						title: '珍珠奶茶',
-						score: 5.0,
 						sales: 100,
 						priceInt: 6,
 						priceFloat: 5,
 						integral: 650
 					},
 					{
-						img: 'background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.de9b84d1464e862e1519425432d715a4?rik=Q8C1pNtrZEs40A&riu=http%3a%2f%2fb2bimgcdn.nbdeli.com%2fStorage%2fItemImages%2f18%2f1802%2f1802002%2f100043267%2fViewBig%2f100043267.jpg&ehk=gHvS0kcPS3rWUyyc5PYxV2yWWzgb5%2bw113qg8ZpaGzs%3d&risl=&pid=ImgRaw&r=0");',
+						img: 'background-image: url("https://ossmuyuanec.oss-cn-beijing.aliyuncs.com/Storage/Shop/1221/Products/17977/1.png");',
+						imgUrl: 'https://ossmuyuanec.oss-cn-beijing.aliyuncs.com/Storage/Shop/1221/Products/17977/1.png',
 						title: '可口可乐',
-						score: 5.0,
 						sales: 100,
 						priceInt: 3,
 						priceFloat: 0,
@@ -148,8 +148,8 @@
 					},
 					{
 						img: 'background-image: url("https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1");',
+						imgUrl: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.s3FA_4X7BSfTiKurjfq5AQHaHa?pid=ImgDet&rs=1',
 						title: '干脆面',
-						score: 5.0,
 						sales: 100,
 						priceInt: 1,
 						priceFloat: 0,
@@ -157,8 +157,8 @@
 					},
 					{
 						img: 'background-image: url("https://www.amphasisdesign.com/image/cache/catalog/corporategifts/Customised%20Products/customized-pu-leather-notebook-800x800.jpg");',
+						imgUrl: 'https://www.amphasisdesign.com/image/cache/catalog/corporategifts/Customised%20Products/customized-pu-leather-notebook-800x800.jpg',
 						title: '笔记本',
-						score: 5.0,
 						sales: 100,
 						priceInt: 1,
 						priceFloat: 0,

@@ -4,8 +4,8 @@
       <el-table-column prop="sid" label="座位号" align="center" width="200" />
       <el-table-column prop="status" label="状态" align="center" width="200">
         <template slot-scope="{row}">
-          <el-tag :type="row.status===1?'success':'danger'">
-            {{ row.status===1?'使用中':'未使用' }}
+          <el-tag :type="row.status===1?'danger':'success'">
+            {{ row.status===1?'使用中':'空闲' }}
           </el-tag>
         </template>
       </el-table-column>

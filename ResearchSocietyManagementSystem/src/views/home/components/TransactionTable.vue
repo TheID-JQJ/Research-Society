@@ -25,7 +25,8 @@
       :hide-on-single-page="true"
       background
       layout="prev, pager, next"
-      :total="100"
+      :total="30"
+      @current-change="currentChange"
     />
   </div>
 </template>
@@ -63,6 +64,9 @@ export default {
       transactionList().then(response => {
         this.list = response.data.items.slice(0, 10)
       })
+    },
+    currentChange(page) {
+      console.log('this is ' + page)
     }
   }
 }

@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"hkc.ink/rss/cmd"
 )
 
@@ -23,5 +21,4 @@ import (
 
 func main() {
 	cmd.Execute()
-	fmt.Println()
 }

@@ -34,6 +34,8 @@ func InitDB() *gorm.DB {
 
 	// 迁移 schema
 	db.AutoMigrate(&model.User{})
+	db.AutoMigrate(&model.File{})
+	db.AutoMigrate(&model.GoodsInformation{})
 
 	return db
 }

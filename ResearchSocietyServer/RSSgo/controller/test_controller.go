@@ -231,3 +231,25 @@ func TestGetAll(ctx *gin.Context) {
 	}
 	response.Success(ctx, gin.H{"users": users}, "查询成功")
 }
+
+var fileService service.FileService
+
+func TestUpload(ctx *gin.Context) {
+	fileName, err := fileService.Upload(ctx)
+	if err != nil {
+		response.Fail(ctx, "文件上传失败")
+		return
+	}
+	response.Success(ctx, gin.H{"fileName": fileName}, "文件上传成功")
+}
+
+func TestDownload(ctx *gin.Context) {
+	s := ctx.Param("fileName")
+	path := fileService.GetFilePath(s)
+	log.Println(path)
+	if path == "" {
+		response.Fail(ctx, "文件读取失败")
+		return
+	}
+	ctx.File(path)
+}

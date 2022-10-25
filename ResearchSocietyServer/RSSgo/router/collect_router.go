@@ -21,6 +21,8 @@ func CollectRouter(r *gin.Engine) {
 	testGroup.POST("/update", controller.TestUpdate)
 	testGroup.GET("/get/:id", controller.TestGet)
 	testGroup.GET("/get/all", controller.TestGetAll)
+	testGroup.POST("/upload", controller.TestUpload)
+	testGroup.GET("/download/:fileName", controller.TestDownload)
 
 	//swagger
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))

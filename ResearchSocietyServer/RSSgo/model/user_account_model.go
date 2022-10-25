@@ -4,9 +4,10 @@ import "gorm.io/gorm"
 
 type UserAccount struct {
 	gorm.Model
-	UserId   uint
-	Residual float64
-	Integral int64
-	Duration int64
-	State    bool
+	UserId          uint            `gorm:"not null;unique" json:"userId"`
+	Residual        float64         `gorm:"not null" json:"residual"`
+	Integral        int64           `gorm:"not null" json:"integral"`
+	Duration        int64           `gorm:"not null" json:"duration"`
+	State           bool            `json:"state"`
+	UserInformation UserInformation `gorm:"ForeignKey:UserId"`
 }

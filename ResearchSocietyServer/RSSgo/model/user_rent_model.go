@@ -8,13 +8,15 @@ import (
 
 type UserRent struct {
 	gorm.Model
-	UserId            uint
-	PublicResourceId  uint
-	RentPrice         float64
-	RentIntegralPrice int64
-	Deposit           float64
-	RentTime          time.Time
-	BackTime          time.Time
-	Status            string
-	State             bool
+	UserId            uint            `gorm:"not null" json:"userId"`
+	PublicResourceId  uint            `gorm:"not null" json:"publicResourceId"`
+	RentPrice         float64         `gorm:"not null" json:"rentPrice"`
+	RentIntegralPrice int64           `gorm:"not null" json:"rentIntegralPrice"`
+	Deposit           float64         `gorm:"not null" json:"deposit"`
+	RentTime          time.Time       `gorm:"not null" json:"rentTime"`
+	BackTime          time.Time       `json:"backTime"`
+	Status            string          `gorm:"size:32;not null" json:"status"`
+	State             bool            `json:"state"`
+	UserInformation   UserInformation `gorm:"ForeignKey:UserId"`
+	PublicResource    PublicResource  `gorm:"ForeignKey:PublicResourceId"`
 }

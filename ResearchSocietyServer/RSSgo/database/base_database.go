@@ -35,7 +35,18 @@ func InitDB() *gorm.DB {
 	// 迁移 schema
 	db.AutoMigrate(&model.User{})
 	db.AutoMigrate(&model.File{})
-	db.AutoMigrate(&model.GoodsInformation{})
+	db.AutoMigrate(
+		&model.UserAccount{}, &model.UserAppoint{}, &model.UserDonate{}, &model.UserFriend{}, &model.UserGroup{}, &model.UserHistory{},
+		&model.UserInformation{}, &model.UserOperateInformation{}, &model.UserOrders{}, &model.UserPassword{}, &model.UserRealName{}, &model.UserRent{},
+		&model.UserRole{}, &model.UserSeat{}, &model.UserShoppingCart{}, &model.UserStar{}, &model.UserTarget{},
+	)
+	db.AutoMigrate(&model.GoodsInformation{}, &model.GoodsKind{})
+	db.AutoMigrate(&model.Seat{}, &model.SeatKind{})
+	db.AutoMigrate(&model.PublicResource{}, &model.PublicResourceKind{})
+	db.AutoMigrate(&model.Finance{}, &model.FinanceKind{})
+	db.AutoMigrate(&model.Feedback{}, &model.Notice{})
+	db.AutoMigrate(&model.TargetType{})
+	db.AutoMigrate(&model.Group{})
 
 	return db
 }

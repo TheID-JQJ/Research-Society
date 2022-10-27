@@ -117,19 +117,25 @@ export const constantRoutes = [
         path: 'group',
         name: 'Group',
         component: () => import('@/views/user/group/index'),
-        meta: { title: '用户群组管理' }
+        meta: { title: '群组管理' }
       },
       {
-        path: 'role',
-        name: 'Role',
-        component: () => import('@/views/user/role/index'),
-        meta: { title: '用户角色管理' }
+        path: 'userGroup',
+        name: 'UserGroup',
+        component: () => import('@/views/user/userGroup/index'),
+        meta: { title: '用户群组管理' }
       },
       {
         path: 'donate',
         name: 'Donate',
         component: () => import('@/views/user/donate/index'),
         meta: { title: '用户捐献管理' }
+      },
+      {
+        path: 'role',
+        name: 'Role',
+        component: () => import('@/views/user/role/index'),
+        meta: { title: '用户角色管理' }
       },
       {
         path: 'permission',
@@ -192,6 +198,12 @@ export const constantRoutes = [
         path: 'notice',
         name: 'Notice',
         component: () => import('@/views/system/notice/index'),
+        meta: { title: '公告管理' }
+      },
+      {
+        path: 'putNotice',
+        name: 'PutNotice',
+        component: () => import('@/views/system/form/index'),
         meta: { title: '发布公告' }
       },
       {

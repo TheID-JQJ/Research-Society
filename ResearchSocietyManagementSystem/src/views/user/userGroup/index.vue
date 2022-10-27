@@ -2,8 +2,8 @@
   <div class="app-container">
     <el-table :data="tableData" border style="width: 100%">
       <el-table-column prop="id" label="序号" align="center" width="100" />
-      <el-table-column prop="userNumber" label="账号" align="center" width="200" />
-      <el-table-column prop="content" label="内容" align="center" />
+      <el-table-column prop="userNumber" label="账号" align="center" />
+      <el-table-column prop="groupNumber" label="群号" align="center" />
       <el-table-column label="操作" align="center" width="230" class-name="small-padding fixed-width">
         <template slot-scope="{row,$index}">
           <el-button v-if="isEdit!==$index" type="primary" size="mini" @click="edit($index)">
@@ -38,52 +38,52 @@ export default {
         {
           id: 1,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         },
         {
           id: 2,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         },
         {
           id: 3,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         },
         {
           id: 4,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         },
         {
           id: 5,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         },
         {
           id: 6,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         },
         {
           id: 7,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         },
         {
           id: 8,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         },
         {
           id: 9,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         },
         {
           id: 10,
           userNumber: '123456',
-          content: '这是一条反馈'
+          groupNumber: '33445'
         }
       ],
       isEdit: -1

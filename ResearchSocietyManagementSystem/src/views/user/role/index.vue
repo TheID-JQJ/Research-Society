@@ -2,7 +2,8 @@
   <div class="app-container">
     <el-table :data="tableData" border style="width: 100%">
       <el-table-column prop="id" label="序号" align="center" width="100" />
-      <el-table-column prop="name" label="种类名称" align="center" />
+      <el-table-column prop="userNumber" label="账号" align="center" />
+      <el-table-column prop="role" label="角色" align="center" />
       <el-table-column label="操作" align="center" width="230" class-name="small-padding fixed-width">
         <template slot-scope="{row,$index}">
           <el-button v-if="isEdit!==$index" type="primary" size="mini" @click="edit($index)">
@@ -36,43 +37,53 @@ export default {
       tableData: [
         {
           id: 1,
-          name: '考研'
+          userNumber: '88888',
+          role: 'root'
         },
         {
           id: 2,
-          name: '考研'
+          userNumber: '66666',
+          role: 'admin'
         },
         {
           id: 3,
-          name: '考研'
+          userNumber: '123456',
+          role: 'user'
         },
         {
           id: 4,
-          name: '考研'
+          userNumber: '123456',
+          role: 'user'
         },
         {
           id: 5,
-          name: '考研'
+          userNumber: '123456',
+          role: 'user'
         },
         {
           id: 6,
-          name: '考研'
+          userNumber: '123456',
+          role: 'user'
         },
         {
           id: 7,
-          name: '考研'
+          userNumber: '123456',
+          role: 'user'
         },
         {
           id: 8,
-          name: '考研'
+          userNumber: '123456',
+          role: 'user'
         },
         {
           id: 9,
-          name: '考研'
+          userNumber: '123456',
+          role: 'user'
         },
         {
           id: 10,
-          name: '考研'
+          userNumber: '123456',
+          role: 'user'
         }
       ],
       isEdit: -1

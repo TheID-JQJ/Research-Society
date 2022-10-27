@@ -2,7 +2,11 @@
   <div class="app-container">
     <el-table :data="tableData" border style="width: 100%">
       <el-table-column prop="id" label="序号" align="center" width="100" />
-      <el-table-column prop="name" label="种类名称" align="center" />
+      <el-table-column prop="userNumber" label="账号" align="center" />
+      <el-table-column prop="seatId" label="座位号" align="center" />
+      <el-table-column prop="startTime" label="开始时间" align="center" />
+      <el-table-column prop="endTime" label="结束时间" align="center" />
+      <el-table-column prop="status" label="状态" align="center" />
       <el-table-column label="操作" align="center" width="230" class-name="small-padding fixed-width">
         <template slot-scope="{row,$index}">
           <el-button v-if="isEdit!==$index" type="primary" size="mini" @click="edit($index)">
@@ -36,43 +40,83 @@ export default {
       tableData: [
         {
           id: 1,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         },
         {
           id: 2,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         },
         {
           id: 3,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         },
         {
           id: 4,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         },
         {
           id: 5,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         },
         {
           id: 6,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         },
         {
           id: 7,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         },
         {
           id: 8,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         },
         {
           id: 9,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         },
         {
           id: 10,
-          name: '考研'
+          userNumber: '123456',
+          seatId: 1,
+          startTime: '2022.10.27 12:00:00',
+          endTime: '2022.10.27 13:00:00',
+          status: '已预约'
         }
       ],
       isEdit: -1

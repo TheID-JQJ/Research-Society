@@ -2,12 +2,10 @@
   <div class="app-container">
     <el-table :data="tableData" border style="width: 100%">
       <el-table-column prop="id" label="序号" align="center" width="100" />
-      <el-table-column prop="uid" label="账号" align="center" width="200" />
-      <el-table-column prop="name" label="账户名称" align="center" width="200" />
-      <el-table-column label="详情" align="center">
-        <!-- <el-table-column prop="user" label="租借者" align="center" />
-        <el-table-column prop="start" label="租借时间" align="center" /> -->
-      </el-table-column>
+      <el-table-column prop="userNumber" label="账号" align="center" />
+      <el-table-column prop="residual" label="余额/(元)" align="center" />
+      <el-table-column prop="integral" label="积分" align="center" />
+      <el-table-column prop="duration" label="剩余时长/(分钟)" align="center" />
       <el-table-column label="操作" align="center" width="230" class-name="small-padding fixed-width">
         <template slot-scope="{row,$index}">
           <el-button v-if="isEdit!==$index" type="primary" size="mini" @click="edit($index)">
@@ -41,8 +39,73 @@ export default {
       tableData: [
         {
           id: 1,
-          uid: 123456,
-          name: 'hkc'
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
+        },
+        {
+          id: 2,
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
+        },
+        {
+          id: 3,
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
+        },
+        {
+          id: 4,
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
+        },
+        {
+          id: 5,
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
+        },
+        {
+          id: 6,
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
+        },
+        {
+          id: 7,
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
+        },
+        {
+          id: 8,
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
+        },
+        {
+          id: 9,
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
+        },
+        {
+          id: 10,
+          userNumber: 123456,
+          residual: 250,
+          integral: 250,
+          duration: 100
         }
       ],
       isEdit: -1

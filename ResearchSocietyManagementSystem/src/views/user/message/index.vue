@@ -2,12 +2,15 @@
   <div class="app-container">
     <el-table :data="tableData" border style="width: 100%">
       <el-table-column prop="id" label="序号" align="center" width="100" />
-      <el-table-column prop="uid" label="账号" align="center" width="200" />
-      <el-table-column prop="name" label="姓名" align="center" width="200" />
-      <el-table-column label="详情" align="center">
-        <!-- <el-table-column prop="user" label="租借者" align="center" />
-        <el-table-column prop="start" label="租借时间" align="center" /> -->
-      </el-table-column>
+      <el-table-column prop="userNumber" label="账号" align="center" />
+      <el-table-column prop="avatar" label="头像" align="center" />
+      <el-table-column prop="username" label="昵称" align="center" />
+      <el-table-column prop="sex" label="性别" align="center" />
+      <el-table-column prop="introduction" label="个性签名" align="center" />
+      <el-table-column prop="email" label="邮箱" align="center" />
+      <el-table-column prop="phoneNumber" label="电话" align="center" />
+      <el-table-column prop="name" label="姓名" align="center" />
+      <el-table-column prop="idNumber" label="身份证" align="center" />
       <el-table-column label="操作" align="center" width="230" class-name="small-padding fixed-width">
         <template slot-scope="{row,$index}">
           <el-button v-if="isEdit!==$index" type="primary" size="mini" @click="edit($index)">
@@ -41,8 +44,123 @@ export default {
       tableData: [
         {
           id: 1,
-          uid: 123456,
-          name: 'hkc'
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
+        },
+        {
+          id: 2,
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
+        },
+        {
+          id: 3,
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
+        },
+        {
+          id: 4,
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
+        },
+        {
+          id: 5,
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
+        },
+        {
+          id: 6,
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
+        },
+        {
+          id: 7,
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
+        },
+        {
+          id: 8,
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
+        },
+        {
+          id: 9,
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
+        },
+        {
+          id: 10,
+          userNumber: 123456,
+          avatar: '空',
+          username: 'hkc',
+          sex: '男',
+          introduction: '这是一个简短的个性签名',
+          email: 'hkchenjianhui@foxmail.com',
+          phoneNumber: '13344556677',
+          name: '名字',
+          idNumber: '这是身份证号'
         }
       ],
       isEdit: -1

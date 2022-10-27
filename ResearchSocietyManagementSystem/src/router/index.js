@@ -67,15 +67,15 @@ export const constantRoutes = [
   {
     path: '/userManagement',
     component: Layout,
-    redirect: '/userManagement/account',
+    redirect: '/userManagement/appoint',
     name: 'UserManagement',
     meta: { title: '用户管理', icon: 'el-icon-user-solid' },
     children: [
       {
-        path: 'account',
-        name: 'Account',
-        component: () => import('@/views/user/account/index'),
-        meta: { title: '账户管理' }
+        path: 'appoint',
+        name: 'Appoint',
+        component: () => import('@/views/user/appoint/index'),
+        meta: { title: '用户预约管理' }
       },
       {
         path: 'message',
@@ -84,16 +84,58 @@ export const constantRoutes = [
         meta: { title: '用户信息管理' }
       },
       {
+        path: 'target',
+        name: 'Target',
+        component: () => import('@/views/user/target/index'),
+        meta: { title: '用户目标管理' }
+      },
+      {
+        path: 'account',
+        name: 'Account',
+        component: () => import('@/views/user/account/index'),
+        meta: { title: '用户账户管理' }
+      },
+      {
+        path: 'password',
+        name: 'Password',
+        component: () => import('@/views/user/password/index'),
+        meta: { title: '用户密码管理' }
+      },
+      {
+        path: 'order',
+        name: 'Order',
+        component: () => import('@/views/user/order/index'),
+        meta: { title: '用户订单管理' }
+      },
+      {
         path: 'friend',
         name: 'Friend',
         component: () => import('@/views/user/friend/index'),
-        meta: { title: '好友管理' }
+        meta: { title: '用户好友管理' }
       },
       {
-        path: 'sort',
-        name: 'TargetSort',
-        component: () => import('@/views/user/sort/index'),
-        meta: { title: '目标类别管理' }
+        path: 'group',
+        name: 'Group',
+        component: () => import('@/views/user/group/index'),
+        meta: { title: '用户群组管理' }
+      },
+      {
+        path: 'role',
+        name: 'Role',
+        component: () => import('@/views/user/role/index'),
+        meta: { title: '用户角色管理' }
+      },
+      {
+        path: 'donate',
+        name: 'Donate',
+        component: () => import('@/views/user/donate/index'),
+        meta: { title: '用户捐献管理' }
+      },
+      {
+        path: 'permission',
+        name: 'Permission',
+        component: () => import('@/views/user/permission/index'),
+        meta: { title: '权限管理' }
       }
     ]
   },
@@ -139,18 +181,27 @@ export const constantRoutes = [
     ]
   },
 
-  // {
-  //   path: '/form',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       name: 'Form',
-  //       component: () => import('@/views/form/index'),
-  //       meta: { title: 'Form', icon: 'form' }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/systemManagement',
+    component: Layout,
+    redirect: '/systemManagement/notice',
+    name: 'SystemManagement',
+    meta: { title: '系统管理', icon: 'el-icon-s-tools' },
+    children: [
+      {
+        path: 'notice',
+        name: 'Notice',
+        component: () => import('@/views/system/notice/index'),
+        meta: { title: '发布公告' }
+      },
+      {
+        path: 'feedback',
+        name: 'Feedback',
+        component: () => import('@/views/system/feedback/index'),
+        meta: { title: '反馈信息' }
+      }
+    ]
+  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

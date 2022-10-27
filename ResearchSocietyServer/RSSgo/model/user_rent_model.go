@@ -14,6 +14,7 @@ type UserRent struct {
 	RentIntegralPrice int64           `gorm:"not null" json:"rentIntegralPrice"`
 	Deposit           float64         `gorm:"not null" json:"deposit"`
 	RentTime          time.Time       `gorm:"not null" json:"rentTime"`
+	ExpirationTime    time.Time       `gorm:"not null" json:"expirationTime"`
 	BackTime          time.Time       `json:"backTime"`
 	Status            string          `gorm:"size:32;not null" json:"status"`
 	State             bool            `json:"state"`

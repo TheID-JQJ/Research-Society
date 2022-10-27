@@ -3,7 +3,7 @@
     <el-table :data="list" style="width: 100%;padding-top: 15px;">
       <el-table-column label="内容" min-width="200">
         <template slot-scope="scope">
-          {{ scope.row.order_no | orderNoFilter }}
+          {{ scope.row.content | orderNoFilter }}
         </template>
       </el-table-column>
       <el-table-column label="时间" width="195" align="center">
@@ -14,7 +14,7 @@
       <el-table-column label="状态" width="100" align="center">
         <template slot-scope="{row}">
           <el-tag :type="row.status | statusFilter">
-            {{ row.status=='pending'?'失败':'成功' }}
+            {{ row.status=='success'?'成功':'失败' }}
           </el-tag>
         </template>
       </el-table-column>
@@ -39,7 +39,7 @@ export default {
     statusFilter(status) {
       const statusMap = {
         success: 'success',
-        pending: 'danger'
+        fail: 'danger'
       }
 
       return statusMap[status]
@@ -53,7 +53,7 @@ export default {
   },
   data() {
     return {
-      list: null
+      list: []
     }
   },
   created() {
@@ -62,7 +62,12 @@ export default {
   methods: {
     fetchData() {
       transactionList().then(response => {
-        this.list = response.data.items.slice(0, 10)
+        for (let index = 0; index < 10; index++) {
+          this.list.push({
+            content: (index + 1) + '号用户进行了XXX操作',
+            status: (index % 2) === 0 ? 'fail' : 'success'
+          })
+        }
       })
     },
     currentChange(page) {
